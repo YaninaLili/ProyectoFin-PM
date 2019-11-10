@@ -15,7 +15,7 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
     </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
 </head>
 <body>
     <header>
@@ -54,8 +54,15 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="~/cuenta/login">Iniciar Sesión</a>
                             </li>
+                            
+                             <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/cuenta/crearrol">Crear Rol</a>
+                            </li>
                         }
                         else{
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/cuenta/asociarrol">Asociar Rol</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="~/cuenta/logout">Cerrar Sesión</a>
                             </li>
@@ -72,9 +79,34 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top">
         <div class="container">
-            <p class="text-center">Calle Los Gavilanes Mz E Lte. 7A - Santa María de Huachipa, Lima, Perú. Teléf. (0950) 110 852 <a asp-area="" asp-controller="Home" asp-action=""></a></p>
+            <div class="row"> 
+                <div class="col-md-4 links">
+                    <div class="widget widget_menu">
+                        <h3 class="h3 hidden-sm-down">Información</h3>
+                        <p>Dirección: Calle Los Gavilanes Mz E Lte. 7A - Santa María de Huachipa, Lima, Perú</p>
+                        <p>Mapa del sitio</p>
+                    </div>
+                </div>
+                <div class="col-md-4 links">
+                    <div class="widget widget_menu">
+                        <h3 class="h3 hidden-sm-down">Contáctanos</h3>
+                        <p>Teléfono: (0950) 110 852</p>
+                        <p>Whatsapp: 950110852</p>
+                        <p>Horarios de atención: L-D, 8:00 am. - 17:00 pm.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 links">
+                    <div class="widget widget_menu">
+                        <h3 class="h3 hidden-sm-down">Social</h3>
+                        <img src="facebook.png">
+                        <img src="twiter.png">
+                        <img src="whatsapp.png">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
