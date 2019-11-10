@@ -36,7 +36,7 @@ namespace ProyectoFin_PM
 
             services.AddDbContext<VidaSaludableContext>(o => o.UseMySql("server=localhost;user=root;password=;database=VidaSaludableBD;"));
 
-            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<VidaSaludableContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<VidaSaludableContext>();
 
             //Para la contraseña menos fuerte
             services.Configure<IdentityOptions>(options => 

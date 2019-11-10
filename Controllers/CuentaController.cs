@@ -11,15 +11,17 @@ namespace ProyectoFin_PM.Controllers
         private UserManager<IdentityUser> _um;
         private RoleManager<IdentityRole> _rm;
         public CuentaController(
-            VidaSaludableContext c,
-            SignInManager<IdentityUser> s, 
+            VidaSaludableContext c,  
+            SignInManager<IdentityUser> s,
             UserManager<IdentityUser> um,
-            RoleManager<IdentityRole> rm){
-            _context=c;
-            _sim=s;
-            _um=um;
+            RoleManager<IdentityRole> rm) {
+
+            _context = c;
+            _sim = s;
+            _um = um;
             _rm = rm;
         }
+
         public IActionResult AsociarRol()
         {
             ViewBag.Usuarios = _um.Users.ToList();
@@ -27,6 +29,7 @@ namespace ProyectoFin_PM.Controllers
 
             return View();
         }
+
         [HttpPost]
         public IActionResult AsociarRol(string usuario, string rol) {
             var user = _um.FindByIdAsync(usuario).Result;
@@ -51,60 +54,70 @@ namespace ProyectoFin_PM.Controllers
 
             return RedirectToAction("index", "home");
         }
-        public IActionResult Crear(){
+
+        public IActionResult Crear() {
             return View();
         }
+
         public IActionResult AccesoDenegado() {
             return View();
         }
 
-
         [HttpPost]
-        public IActionResult Crear(CrearCuentaViewModel model){
-            if(ModelState.IsValid){
-                //Guardar los datos del modelo en la tabla usuarios
+        public IActionResult Crear(CrearCuentaViewModel model) {
+            if (ModelState.IsValid) {
+                // Guardar datos del modelo en la tabla usuarios
                 var usuario = new IdentityUser();
                 usuario.UserName = model.Correo;
                 usuario.Email = model.Correo;
 
-                IdentityResult resultado = _um.CreateAsync(usuario,model.Password1).Result;
+                IdentityResult resultado = _um.CreateAsync(usuario, model.Password1).Result;
                 var r = _um.AddToRoleAsync(usuario, "Usuario").Result;
-                if(resultado.Succeeded){
-                    return RedirectToAction("index","home");
-                }
-                else{
-                    foreach(var item in resultado.Errors){
-                        ModelState.AddModelError("",item.Description);
-                    }
-                }
 
+
+                if (resultado.Succeeded) {
+                    return RedirectToAction("index", "home");
+                }
+                else {
+                    foreach (var item in resultado.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }                
             }
+
             return View(model);
         }
 
-        public IActionResult Login()
-        {
+        public IActionResult Login() {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Login(LoginViewModel model)
-        {
-            if(ModelState.IsValid){
-                var resultado = _sim.PasswordSignInAsync(model.Correo,model.Password,true,false).Result;
-                if(resultado.Succeeded){
-                    return RedirectToAction("index","home");
+        public IActionResult Login(LoginViewModel model) {
+
+            if (ModelState.IsValid) {
+
+             
+                var resultado = _sim.PasswordSignInAsync(model.Correo, model.Password, true, false).Result;
+
+                if (resultado.Succeeded) {
+
+                    return RedirectToAction("index", "home");
                 }
-                else{
-                    ModelState.AddModelError("","Datos Incorrectos");
+                else {
+                    
+                    ModelState.AddModelError("", "Datos incorrectos");
                 }
-            }
+            }        
+
             return View(model);
         }
 
-        public IActionResult Logout(){
+        public IActionResult Logout() {
             _sim.SignOutAsync();
-            return RedirectToAction("index","home"); 
+
+            return RedirectToAction("index", "home");
         }
     }
 }
