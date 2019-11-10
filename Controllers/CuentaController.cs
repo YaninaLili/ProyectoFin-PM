@@ -27,7 +27,7 @@ namespace ProyectoFin_PM.Controllers
         {
             ViewBag.Usuarios = _um.Users.ToList();
             ViewBag.Roles = _rm.Roles.ToList();
-
+            
             return View();
         }
 
@@ -55,15 +55,13 @@ namespace ProyectoFin_PM.Controllers
 
             return RedirectToAction("index", "home");
         }
-
-        public IActionResult Crear() {
-            return View();
-        }
-
         public IActionResult AccesoDenegado() {
             return View();
         }
-
+        public IActionResult Crear() {
+            return View();
+        }
+        
         [HttpPost]
         public IActionResult Crear(CrearCuentaViewModel model) {
             if (ModelState.IsValid) {
