@@ -14,10 +14,12 @@ namespace ProyectoFin_PM.Controllers
         {
             return View();
         }
+
         public IActionResult Nosotros()
         {
             return View();
         }
+        
         public IActionResult Privacy()
         {
             return View();

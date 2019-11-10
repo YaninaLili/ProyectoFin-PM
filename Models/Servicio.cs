@@ -6,17 +6,14 @@ namespace ProyectoFin_PM.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        [Display(Name="Url de Foto")]
         public string Foto { get; set; }
         
         [Required]
         [Display(Name="Nombre")]
         public string Nombre { get; set; }
 
-        [Required]
-        [Display(Name="Tipo")]
-        public string Tipo { get; set; }
-
-        [Required]
         [Display(Name="Tiempo")]
         public string Tiempo { get; set; }
 

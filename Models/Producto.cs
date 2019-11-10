@@ -4,9 +4,10 @@ namespace ProyectoFin_PM.Models
 {
     public class Producto
     {
-
         public int Id { get; set; }
         
+        [Required]
+        [Display(Name="Url de Foto")]
         public string Foto { get; set; }
 
         [Required]
@@ -18,8 +19,8 @@ namespace ProyectoFin_PM.Models
         public string Marca { get; set; }
 
         [Required]
-        [Display(Name="Medida")]
-        public int Medida { get; set; }
+        [Display(Name="Medida (gr./ml.)")]
+        public float Medida { get; set; }
 
         [Required]
         [Display(Name="Precio")]

@@ -17,7 +17,7 @@ namespace ProyectoFin_PM.Models
         [Required]
         [DataType(DataType.Password)]
         [Display(Name="Confirmar Contraseña")]
-        [Compare("Password1", ErrorMessage = "Las contraseñas no coinciden")]
+        [Compare("Password1", ErrorMessage = "Las contraseñas no coinciden.")]
         public string Password2 { get; set; }
     }
 }

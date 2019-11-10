@@ -2,26 +2,23 @@
 
 <h1>Lista de Productos</h1>
 
-@if (Model.Count == 0) {
+@if (Model.Count == 0) 
+{
     <p>No hay productos registrados.</p>
 }
 
-@foreach (var item in Model)
-{
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <img src="@item.Foto">
-                <ul class="list">
-                    <li>@item.Nombre</li>
-                    <li>@item.Marca</li>
-                    <li>@item.Medida</li>
-                    <li>@item.Precio</li>
-                    <li>@item.Descripcion</li>
-                </ul>
-            </div>
-            </div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4">
+            <img src="@item.Foto">
         </div>
-    </div>
-}
+        <div class="col-sm-6">
+                <h3>@item.Nombre</h3>
+                <p>Marca: @item.Marca</p>
+                <p>Medida: @item.Medida</p>
+                <p>Precio: @item.Precio</p>
+                <p>Descripción: @item.Descripcion</p>
+        </div>
+    }
+</div>
