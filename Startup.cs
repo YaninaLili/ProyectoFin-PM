@@ -47,7 +47,11 @@ namespace ProyectoFin_PM
                 options.Password.RequireNonAlphanumeric = false;
             }
             );
-
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Cuenta/Login";
+                options.AccessDeniedPath = "/Cuenta/AccesoDenegado";
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -65,9 +69,10 @@ namespace ProyectoFin_PM
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
