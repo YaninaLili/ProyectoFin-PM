@@ -1,4 +1,5 @@
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoFin_PM.Models;
 
@@ -18,7 +19,7 @@ namespace ProyectoFin_PM.Controllers
             var lista = _context.Servicios.ToList();
             return View(lista);
         }
-
+        [Authorize(Roles="Administrador")]
         public IActionResult Registro()
         {
             return View();

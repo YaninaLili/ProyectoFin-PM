@@ -20,7 +20,7 @@ namespace ProyectoFin_PM.Models
 
         [Required]
         [Display(Name="Medida (gr./ml.)")]
-        public float Medida { get; set; }
+        public string Medida { get; set; }
 
         [Required]
         [Display(Name="Precio")]
