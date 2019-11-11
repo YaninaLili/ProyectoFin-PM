@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3 p-5">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img width="10px" src="icoVida.png">
+                    <img width="170px" src="icoVida.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -52,14 +52,14 @@
                     
                          @if(!User.Identity.IsAuthenticated){
                             <li class="nav-item">
-                                <a class="nav-link text-dark"  style="-webkit-text-stroke: 0.5px white" href="~/cuenta/crear">Crear Cuenta</a>
+                                <a class="nav-link text-dark"  style="-webkit-text-stroke: 0.5px rgb(5, 183, 214)" href="~/cuenta/crear">Crear Cuenta</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" style="-webkit-text-stroke: 0.5px white" href="~/cuenta/login">Iniciar Sesión</a>
+                                <a class="nav-link text-dark" style="-webkit-text-stroke: 0.5px rgb(5, 183, 214)" href="~/cuenta/login">Iniciar Sesión</a>
                             </li>
                             
                              <li class="nav-item">
-                                <a class="nav-link text-dark"  style="-webkit-text-stroke: 0.5px white" href="~/cuenta/crearrol">Crear Rol</a>
+                                <a class="nav-link text-dark"  style="-webkit-text-stroke: 0.5px rgb(5, 183, 214)" href="~/cuenta/crearrol">Crear Rol</a>
                             </li>
                         }
                         else{
