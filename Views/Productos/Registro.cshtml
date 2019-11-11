@@ -1,55 +1,69 @@
 @model Producto
 
-<div class="col-lg-8" >
+<div style="background-image: url(https://www.campusgrupoglorieta.com/entrada/images/fixed/background.jpg)">
     <div class="text-center">
-        <h1>Registro de Productos</h1>
+        <h1>Registro de Productos</h1><br>
     </div>
-
-    <form method="post">
-        <div asp-validation-summary="All"></div>
-
-        <div class="form-group">
-            <label asp-for="Foto"></label>
-            <input asp-for="Foto" class="form-control">
+    <div class="content">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-lg-7">
+                    <div class="title-style-1 marginb30 margint30">
+                        <form method="post">
+                            <div asp-validation-summary="All"></div>
+                
+                            <div class="form-group">
+                                <label asp-for="Foto"></label>
+                                <input asp-for="Foto" class="form-control">
+                            </div>
+                
+                            <div class="form-group">
+                                <label asp-for="Nombre"></label>
+                                <input asp-for="Nombre" class="form-control">
+                            </div>
+                
+                            <div class="form-group">
+                                <label asp-for="Marca"></label>
+                                <select asp-for="Marca" class="form-control">
+                                    <option value="Seleccionar">Seleccionar</option>
+                                    <option value="A">Vidax</option>
+                                    <option value="B">Naturally Divine</option>
+                                    <option value="C">Nutrimix</option>
+                                    <option value="D">Super Natural</option>
+                                    <option value="E">Natura Vital</option>
+                                    <option value="F">Nordic Naturals</option>
+                                    <option value="G">Geosalud</option>
+                                    <option value="H">Juman</option>
+                                    <option value="I">Vidnatur</option>
+                                    <option value="J">Nutribody</option>
+                                </select>
+                            </div>
+                
+                            <div class="form-group">
+                                <label asp-for="Medida"></label>
+                                <input asp-for="Medida" class="form-control">
+                            </div>
+                
+                            <div class="form-group">
+                                <label asp-for="Precio"></label>
+                                <input asp-for="Precio" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label asp-for="Descripcion"></label>
+                                <textarea asp-for="Descripcion" rows="5" class="form-control"></textarea>
+                            </div>
+                
+                            <button class="btn btn-success">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://farmaciaenburgos.es/media/actualidad/consejos-sobre-tratamientos-naturales/medicina-natural_-1024x683.jpg" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <img src="https://mejorconsalud.com/wp-content/uploads/2017/06/El-lado-oscuro-de-8-productos-naturales-500x286.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label asp-for="Nombre"></label>
-            <input asp-for="Nombre" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Marca"></label>
-            <select asp-for="Marca" class="form-control">
-                <option value="Seleccionar">Seleccionar</option>
-                <option value="A">aaa</option>
-                <option value="B">bbb</option>
-                <option value="C"></option>
-                <option value="D"></option>
-                <option value="E"></option>
-                <option value="F"></option>
-                <option value="G"></option>
-                <option value="H"></option>
-                <option value="I"></option>
-                <option value="J"></option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Medida"></label>
-            <input asp-for="Medida" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Precio"></label>
-            <input asp-for="Precio" class="form-control">
-        </div>
-        
-        <div class="form-group">
-            <label asp-for="Descripcion"></label>
-            <textarea asp-for="Descripcion" rows="5" class="form-control"></textarea>
-        </div>
-
-        <button class="btn btn-success">Registrar</button>
-    </form>
+    </div>
 </div>

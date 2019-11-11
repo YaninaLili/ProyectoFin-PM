@@ -1,40 +1,52 @@
 @model Servicio
 
-<div class="container">
-    <div class="col-lg-8" >
-        <div class="text-center">
-            <h1>Registro de Servicios</h1>
+<div style="background-image: url(https://www.campusgrupoglorieta.com/entrada/images/fixed/background.jpg)">
+    <div class="text-center">
+        <h1>Registro de Servicios</h1><br>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-lg-7" >
+                    <div class="title-style-1 marginb30 margint30">
+                        <form method="post">
+                            <div asp-validation-summary="All"></div>
+                    
+                            <div class="form-group">
+                                <label asp-for="Foto"></label>
+                                <input asp-for="Foto" class="form-control">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label asp-for="Nombre"></label>
+                                <input asp-for="Nombre" class="form-control">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label asp-for="Tiempo"></label>
+                                <input asp-for="Tiempo" class="form-control">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label asp-for="Precio"></label>
+                                <input asp-for="Precio" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label asp-for="Descripcion"></label>
+                                <textarea asp-for="Descripcion" rows="5" class="form-control"></textarea>
+                            </div>
+                    
+                            <button class="btn btn-warning">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://consejosdevidasaludables.com/wp-content/uploads/2017/08/medicina-alternativa-y-complementaria.jpg" class="img-fluid" alt="Responsive image">
+                    <br>
+                    <img src="https://elartedepensar.files.wordpress.com/2015/10/imagen41.png?w=401&h=323" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
         </div>
-    
-        <form method="post">
-            <div asp-validation-summary="All"></div>
-    
-            <div class="form-group">
-                <label asp-for="Foto"></label>
-                <input asp-for="Foto" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label asp-for="Nombre"></label>
-                <input asp-for="Nombre" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label asp-for="Tiempo"></label>
-                <input asp-for="Tiempo" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label asp-for="Precio"></label>
-                <input asp-for="Precio" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label asp-for="Descripcion"></label>
-                <textarea asp-for="Descripcion" rows="5" class="form-control"></textarea>
-            </div>
-    
-            <button class="btn btn-warning">Registrar</button>
-        </form>
     </div>
 </div>
