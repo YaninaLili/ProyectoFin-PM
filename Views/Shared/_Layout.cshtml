@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProyectoFin_PM</title>
+    <title>@ViewData["Title"] - Vida-Saludable</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -20,9 +20,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProyectoFin_PM</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img width="150px" src="icoVida.png">
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -80,9 +82,10 @@
         </main>
     </div>
 
-   <footer class="border-top footer text-muted">
-        <div class="container">
-            <div class="row"> 
+   <footer class="border-top footer text-muted mt-5">
+   
+        <div class="container" >
+            <div class="row mt-5"> 
                 <div class="col-md-4 links">
                     <div class="widget widget_menu">
                         <h3 class="h3 hidden-sm-down">Información</h3>
@@ -92,7 +95,7 @@
                 </div>
                 <div class="col-md-4 links">
                     <div class="widget widget_menu">
-                        <h3 class="h3 hidden-sm-down">Contáctanos</h3>
+                        <h3 class="h3 hidden-sm-down border-bottom">Contáctanos</h3>
                         <p>Teléfono: (0950) 110 852</p>
                         <p>Whatsapp: 950110852</p>
                         <p>Horarios de atención: L-D, 8:00 am. - 17:00 pm.</p>
@@ -109,6 +112,7 @@
                 </div>
             </div>
         </div>
+        
     </footer>
  
 
