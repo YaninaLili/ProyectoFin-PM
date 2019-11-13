@@ -72,5 +72,18 @@ body {
   
 }
 
+.cajita {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cajita1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
 
 
