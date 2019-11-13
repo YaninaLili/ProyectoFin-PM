@@ -13,7 +13,6 @@ ul.navbar-nav{
 
 }
 
-
 nav.navbar {
  
   background-image: url(https://piwen.cl/wp-content/themes/piwen/assets/img/header.jpg);
@@ -69,6 +68,19 @@ body {
   background-color: cadetblue; 
   
 }
+
+.cajita {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cajita1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 
 
 
