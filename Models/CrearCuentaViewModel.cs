@@ -6,7 +6,7 @@ namespace ProyectoFin_PM.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name="Correo electrónico")]
+        [Display(Name="Correo Electrónico")]
         public string Correo { get; set; }
 
         [Required]
