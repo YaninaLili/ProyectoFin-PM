@@ -1,4 +1,5 @@
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoFin_PM.Models;
@@ -37,7 +38,7 @@ namespace ProyectoFin_PM.Controllers
 
             var resultado = _um.AddToRoleAsync(user, rol).Result;
 
-            return RedirectToAction("index", "home");
+            return RedirectToAction("logout", "cuenta");
         }
 
         public IActionResult CrearRol()
@@ -53,7 +54,7 @@ namespace ProyectoFin_PM.Controllers
 
             var resultado = _rm.CreateAsync(rol).Result;
 
-            return RedirectToAction("index", "home");
+            return RedirectToAction("crearrol", "cuenta");
         }
         public IActionResult AccesoDenegado() {
             return View();

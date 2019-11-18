@@ -20,7 +20,7 @@ namespace ProyectoFin_PM.Controllers
             var lista = _context.Productos.ToList();
             return View(lista);
         }
-         [Authorize(Roles="Administrador")]
+        [Authorize(Roles="Administrador")]
         public IActionResult Registro() 
         {
             return View();
